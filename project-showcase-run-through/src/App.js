@@ -27,6 +27,7 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Home 
+            setAllProjectsClicked={setAllProjectsClicked}
             allProjectsClicked={allProjectsClicked}
             projects={projects}
           />
