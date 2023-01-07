@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import Projects from './Projects';
 
-function Home() {
+function Home({ allProjectsClicked, projects }) {
 
-  const [projects, setProjects] = useState([]);
-
-  useEffect(() => {
-    fetch('')
-
-  }, [])
 
   return (
     <div>
       <h1>Home</h1>
+      
+      { allProjectsClicked ? <Projects projects={projects} /> : null}
+
     </div>
   );
 }

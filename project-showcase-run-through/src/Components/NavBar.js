@@ -18,7 +18,7 @@ const Header = styled.header`
 `
 
 
-function NavBar() {
+function NavBar({ setAllProjectsClicked }) {
     return (
     <Header>
         <div>
@@ -29,7 +29,7 @@ function NavBar() {
         </div>
 
         <Navigation>
-            <NavLink to="/">
+            <NavLink to="/" onClick={() => setAllProjectsClicked(true)}>
                 All Projects
             </NavLink>
             <NavLink to="/projects/new">
