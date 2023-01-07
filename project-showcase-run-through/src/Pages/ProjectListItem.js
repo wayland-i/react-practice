@@ -7,6 +7,11 @@ const Tile = styled.div`
     height: auto;
     border: 2px solid black;
     margin: 1%;
+    padding: 3%;
+
+    & > * {
+      text-align: center;
+    }
 `
 
 
@@ -14,9 +19,9 @@ const Tile = styled.div`
 function ProjectListItem({ name, about, phase, link, image }) {
   return (
     <Tile>
-        <h4>
+        <h3>
             {name}
-        </h4>
+        </h3>
         <p>
             {about}
         </p>

@@ -9,8 +9,8 @@ function Home({ allProjectsClicked, projects, setAllProjectsClicked={setAllProje
     flex-direction: column;
     align-items: center;
     border: 2px solid black;
-    padding: 5%;
-    margin: 0 10% 0 10%;
+    padding: 2%;
+    margin: 0 20% 0 20%;
 
     button {
       font-size: 5rem;
