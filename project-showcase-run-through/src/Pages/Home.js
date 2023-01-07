@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 function Home() {
+
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    fetch('')
+
+  }, [])
+
   return (
-    <div>Home</div>
+    <div>
+      <h1>Home</h1>
+    </div>
   );
 }
 

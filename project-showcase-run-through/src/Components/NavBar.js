@@ -3,11 +3,9 @@ import { NavLink, Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Navigation = styled.header`
-    /* display: flex; */
     & > * {
     margin: 15px;
     }
-
 `
 
 const Header = styled.header`
