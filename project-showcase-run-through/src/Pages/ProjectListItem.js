@@ -17,9 +17,9 @@ function ProjectListItem({ name, about, phase, link, image }) {
         <h4>
             {name}
         </h4>
-        <text>
+        <p>
             {about}
-        </text>
+        </p>
     </Tile>
   );
 }

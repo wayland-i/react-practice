@@ -11,10 +11,15 @@ const Container = styled.ul`
 
 
 function Projects({ projects }) {
+
+  const listProjects = (projects) => {
+    return projects.map(project => <ProjectListItem {...project} key={project.id}/>);
+  }
+
   return (
     <div>  
       <Container>
-      { projects.map(project => <ProjectListItem {...project} key={project.id}/>) }
+        {listProjects(projects)}
       </Container>
 
     </div>
