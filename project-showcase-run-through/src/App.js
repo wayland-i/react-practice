@@ -19,7 +19,8 @@ function App() {
 
   }, []);
 
-
+  console.log(projects);
+  
   return (
     <div>
       <NavBar setAllProjectsClicked={setAllProjectsClicked}/>
