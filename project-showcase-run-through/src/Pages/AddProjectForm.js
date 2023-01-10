@@ -19,7 +19,7 @@ const AddForm = styled.form`
 
 `
 
-function AddProjectForm() {
+function AddProjectForm({ AddingProject }) {
 
   const [formData, setFormData] = useState({
     name: "",
@@ -32,15 +32,18 @@ function AddProjectForm() {
 
   const handleOnChange = (e) => {
     const {name, value} = e.target;
-
-
     setFormData((formData) => ({ ...formData, [name]: value }));
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    AddingProject(formData);
   }
 
   return (
     <div>
 
-      <AddForm>
+      <AddForm onSubmit={handleSubmit}>
         <label htmlFor='name'>Name:</label>
         <input id='name' name='name' value={formData.name} onChange={handleOnChange}></input>
         <label htmlFor='about'>About:</label>
@@ -50,14 +53,15 @@ function AddProjectForm() {
           <option>Select a phase...</option>
           <option value="Phase 1">Phase 1</option>
           <option value="Phase 2">Phase 2</option>
-          <option value="Phase 3">Phase 2</option>
-          <option value="Phase 4">Phase 3</option>
-          <option value="Phase 5">Phase 3</option>
+          <option value="Phase 3">Phase 3</option>
+          <option value="Phase 4">Phase 4</option>
+          <option value="Phase 5">Phase 5</option>
         </select>
         <label htmlFor='link'>Link:</label>
         <input id='link' name='link' value={formData.link} onChange={handleOnChange}></input>
         <label htmlFor='image'>Image:</label>
         <input id='image' name='image' value={formData.image} onChange={handleOnChange}></input>
+        <button type='submit'>Submit!</button>
       </AddForm>
 
     </div>

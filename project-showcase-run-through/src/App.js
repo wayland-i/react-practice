@@ -19,8 +19,18 @@ function App() {
 
   }, []);
 
-  console.log(projects);
-  
+  const AddingProject = (newProject) => {
+    fetch('http://localhost:4000/projects', {
+      method: 'POST',
+      body: JSON.stringify(newProject),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(res => res.json())
+    .then(data => console.log(data))
+  }
+
   return (
     <div>
       <NavBar setAllProjectsClicked={setAllProjectsClicked}/>
@@ -34,7 +44,7 @@ function App() {
           />
         </Route>
         <Route path="/projects/new">
-          <AddProjectForm/>
+          <AddProjectForm AddingProject={AddingProject}/>
         </Route>
         <Route path="/about">
           <About />
